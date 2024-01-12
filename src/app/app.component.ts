@@ -50,7 +50,7 @@ amount: number | null = null;
     const toRate = this.rates[this.toCurrency];
 
     if (fromRate && toRate) {
-      this.result = (this.amount * fromRate) / toRate;
+      this.result = parseFloat((this.amount * fromRate / toRate).toFixed(2));
     } else {
       console.error('Invalid currency codes');
     }
@@ -66,7 +66,7 @@ amount: number | null = null;
     const toRate = this.rates[this.fromCurrency];
 
     if (fromRate && toRate) {
-      this.amount = (this.result * fromRate) / toRate;
+      this.amount = parseFloat((this.result * fromRate / toRate).toFixed(2));
     } else {
       console.error('Invalid currency codes');
     }
