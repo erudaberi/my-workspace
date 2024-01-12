@@ -1,0 +1,165 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * Delete the template below * * * * * * * * * -->
+<!-- * * * * * * * to get started with your project! * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+<style>
+  :host {
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+      "Segoe UI Symbol";
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1 {
+    color: #1b1b1b;
+    font-size: 3.125rem;
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: -0.125rem;
+    margin: 0;
+    font-family: "Inter Tight", -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji",
+      "Segoe UI Emoji", "Segoe UI Symbol";
+  }
+
+  p {
+    margin: 0;
+    color: #1b1b1b;
+  }
+  main {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    box-sizing: inherit;
+    position: relative;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .content {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    width: 80vw;
+    max-width: 900px;
+    margin-bottom: 2rem;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+  }
+
+  .content h1 {
+    margin-top: 1.75rem;
+  }
+
+  .content p {
+    margin-top: 1.5rem;
+  }
+
+  .divider {
+    width: 1px;
+    background: var(--red-to-pink-to-purple-vertical-gradient);
+    margin-inline: 0.5rem;
+  }
+
+  .social-links path {
+    transition: fill 0.3s ease;
+    fill: var(--gray-400);
+  }
+
+  .social-links a:hover svg path {
+    fill: var(--gray-900);
+  }
+
+  @media screen and (max-width: 650px) {
+    .content {
+      flex-direction: column;
+      width: max-content;
+    }
+
+    .divider {
+      height: 1px;
+      width: 100%;
+      background: var(--red-to-pink-to-purple-horizontal-gradient);
+      margin-block: 1.5rem;
+    }
+  }
+</style>
+
+<main class="main">
+  <app-header> </app-header>
+
+  <div class="content">
+    <div class="left-side">
+      <h1>Конвектор валют</h1>
+      <p>Конвертуйте вашу валюту 🎉</p>
+    </div>
+
+    <div class="table">
+      <div class="row">
+        <div class="col selectMode">
+          <label for="fromCurrency">Реалізую:</label>
+          <select
+            [(ngModel)]="fromCurrency"
+            class="form-control"
+            id="fromCurrency"
+            (change)="onCurrencyChange()"
+          >
+            <option value="UAN">UAN — Гривні</option>
+          </select>
+        </div>
+        <div class="col selectMode">
+          <label for="toCurrency">Отримаю:</label>
+          <select
+            [(ngModel)]="toCurrency"
+            class="form-control"
+            id="toCurrency"
+            (change)="onCurrencyChange()"
+          >
+            <option value="USD">USD — Доллар США</option>
+            <option value="EUR">EUR — Евро</option>
+            <option value="AND">AND — Австралійський Доллар</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row convertInput">
+        <div class="col selectMode">
+          <input
+            id="amount"
+            type="number"
+            class="form-control"
+            [(ngModel)]="amount"
+            (input)="onAmountChange()"
+          />
+        </div>
+        <div class="col selectMode">
+          <input
+            id="result"
+            type="number"
+            class="form-control"
+            [(ngModel)]="result"
+            (ngModelChange)="onResultChange()"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--end convert -->
+</main>
+
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content above * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * End of Placeholder  * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
+
+<router-outlet></router-outlet>-->
